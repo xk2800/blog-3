@@ -31,13 +31,25 @@ export default defineConfig({
       {
         name: "post",
         label: "Posts",
-        path: "content/posts",
+        path: "/src/pages/listings",
         fields: [
           {
             type: "string",
             name: "title",
             label: "Title",
             isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "description",
+            label: "Short Description",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "author",
+            label: "Author Name",
             required: true,
           },
           {
