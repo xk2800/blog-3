@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const allPosts = await Astro.glob('../pages/listings/*.md');
+
+---
+
+<BaseLayout pageTitle="All job listings">
+  <h1>This is all the job listing</h1>
+
+  {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+</BaseLayout>
