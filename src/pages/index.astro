@@ -1,7 +1,30 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import dayjs from "dayjs";
+
+const allPosts = await Astro.glob('../pages/listings/*.md');
+
 ---
 
-<Layout title="Welcome to Astro.">
-	
-</Layout>
+<BaseLayout pageTitle="All job listings">
+  <h1>This is all the job listing</h1>
+
+  {
+    allPosts.map((post) => {
+      const formatedPubDate = dayjs(post.frontmatter.pubDate).format("DD MMM YYYY");
+      
+      return (
+        <div class="my-7">
+          <div>
+            <p>{post.frontmatter.title}</p>
+            <p>{formatedPubDate}</p>
+            <p>{post.frontmatter.description}</p>
+          </div>
+          <div>
+            <a href={post.url}>Read More</a>
+          </div>
+        </div>
+      );
+    })
+  }
+</BaseLayout>
