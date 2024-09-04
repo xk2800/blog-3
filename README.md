@@ -10,6 +10,8 @@ This one of my personal projects where this is an experimental blog built on Ast
 - Tina CMS
 - Tailwind CSS
 
+> Currently, Tina CMS is only available via localhost and updating any content would require a git commit to this repo.
+
 ## Todo List
 
 1. [ 👨🏻‍💻 ] Enable guest writers to add their own name into a custom dropdown when they select "Guest Writer in "Author" field. [^1]
