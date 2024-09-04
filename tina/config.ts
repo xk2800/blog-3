@@ -1,6 +1,5 @@
 import { defineConfig } from "tinacms";
 import { TinaCMS, Form } from 'tinacms'
-import { AuthorSelect } from "../AuthorSelect";
 
 type BeforeSubmitFunction = (args: {
   values: Record<string, unknown>
@@ -108,6 +107,11 @@ export default defineConfig({
             label: "Author Name",
             options: ['Xavier', 'Guest Writer'],
             required: true,
+          },
+          {
+            type: 'string',
+            label: 'Tags',
+            name: 'tags',
           },
           {
             type: "rich-text",

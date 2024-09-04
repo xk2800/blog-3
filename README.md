@@ -1,54 +1,29 @@
-# Astro Starter Kit: Basics
+# Blog using Astro and Tina CMS
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Introduction
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+This one of my personal projects where this is an experimental blog built on Astro with it's blog content being written to .md files and controlled by git's source control instead of the conventional database. Tina CMS acts as a ease of use tool where by using Tina CMS, it enables non dev's to be able to write content onto the blog as well.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Tech Stack
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- Astro (TypeScript)
+- Tina CMS
+- Tailwind CSS
 
-## 🚀 Project Structure
+## Todo List
 
-Inside of your Astro project, you'll see the following folders and files:
+1. [ 👨🏻‍💻 ] Enable guest writers to add their own name into a custom dropdown when they select "Guest Writer in "Author" field. [^1]
+2. [ 👨🏻‍💻 ] Enable tags to be added into Tina CMS. (Currently unable to find a solution for this besides using ['Custom Components'](https://tina.io/docs/extending-tina/custom-field-components/)). [^1]
+3. [ 👨🏻‍💻 ] Allow users to add images into the post. Plan to look into adding _Cloudinary_ into this feature to take the load of uploading images from git. [^1]
+4. [ 👨🏻‍💻 ] Update overall style of the FE pages to my design's.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+[^1]: Due to the limitations of Tina CMS, this feature might not be deprioritized.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Future considerations
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+1. Enabling Tina CMS to live on a self-hosted/Tina CMS cloud to enable ease of use of non dev users.
+2. Changing to a more flexible CMS solution if Tina CMS turns out to restrict future feature development.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Contributions
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+I am open to contributions or suggestions on how I could implement items in the Todo List or any improvements that could be done to my current codebase as I am fairly new to Astro and my first time of hearing about Tina CMS, let alone use it in my tech stack. Thank you in advance!
