@@ -1,4 +1,11 @@
 import { defineConfig } from "tinacms";
+import { TinaCMS, Form } from 'tinacms'
+
+type BeforeSubmitFunction = (args: {
+  values: Record<string, unknown>
+  cms: TinaCMS
+  form: Form
+}) => Promise<void | Record<string, unknown>>
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -29,6 +36,24 @@ export default defineConfig({
   schema: {
     collections: [
       {
+        ui: {
+          beforeSubmit: async ({
+            form,
+            cms,
+            values,
+          }: {
+            form: Form
+            cms: TinaCMS
+            values: Record<string, any>
+          }) => {
+            if (form.crudType === 'create') {
+              return {
+                ...values,
+                createdAt: new Date().toISOString(),
+              }
+            }
+          }
+        },
         name: "post",
         label: "Posts",
         path: "/src/pages/listings",
