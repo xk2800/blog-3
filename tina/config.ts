@@ -1,3 +1,4 @@
+import '../src/styles/global.css'
 import { defineConfig } from "tinacms";
 import { TinaCMS, Form } from 'tinacms'
 
