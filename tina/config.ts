@@ -1,6 +1,6 @@
-import '../src/styles/global.css'
 import { defineConfig } from "tinacms";
 import { TinaCMS, Form } from 'tinacms'
+import { AuthorSelect } from "../AuthorSelect";
 
 type BeforeSubmitFunction = (args: {
   values: Record<string, unknown>
@@ -65,7 +65,7 @@ export default defineConfig({
             // Example of using a custom slugify function
             slugify: (values) => {
               // Values is an object containing all the values of the form. In this case it is {title?: string, topic?: string}
-              return `${values?.title?.toLowerCase().replace(/ /g, '-') || 'Type your title to change this'}`
+              return `${values?.title?.toLowerCase().replace(/ /g, '-') || "Type your title above and this will update on it's own"}`
             },
           },
         },
