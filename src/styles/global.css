@@ -89,3 +89,9 @@ html.dark {
 .dark .nav-links a {
   color: #fff;
 }
+
+pre{
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px 0;
+}

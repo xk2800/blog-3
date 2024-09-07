@@ -49,15 +49,34 @@ export default defineConfig({
             if (form.crudType === 'create') {
               return {
                 ...values,
-                createdAt: new Date().toISOString(),
+                pubDate: new Date().toISOString(),
+              }
+            } else {
+              return {
+                ...values,
+                lastUpdated: new Date().toISOString(),
               }
             }
+          }
+        },
+        defaultItem: () => {
+          return {
+            layout: '../../layouts/MarkdownPostLayout.astro', // to set defaults on schema
           }
         },
         name: "post",
         label: "Posts",
         path: "/src/pages/listings",
         fields: [
+          {
+            type: "string",
+            name: "layout",
+            label: "Layout",
+            required: true,
+            ui: {
+              component: null, // This disables editing for the field
+            },
+          },
           {
             type: "string",
             name: "title",
@@ -82,6 +101,24 @@ export default defineConfig({
             name: "body",
             label: "Body",
             isBody: true,
+          },
+          {
+            type: "datetime",
+            name: "pubDate",
+            label: "Created At",
+            required: true,
+            ui: {
+              component: null, // This disables editing for the field
+            },
+          },
+          {
+            type: "datetime",
+            name: "lastUpdated",
+            label: "Last Updated",
+            required: true,
+            ui: {
+              component: null, // This disables editing for the field
+            },
           },
         ],
       },
