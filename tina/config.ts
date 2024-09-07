@@ -57,11 +57,21 @@ export default defineConfig({
                 lastUpdated: new Date().toISOString(),
               }
             }
-          }
+          },
+          filename: {
+            // if disabled, the editor can not edit the filename
+            readonly: true,
+            // Example of using a custom slugify function
+            slugify: (values) => {
+              // Values is an object containing all the values of the form. In this case it is {title?: string, topic?: string}
+              return `${values?.title?.toLowerCase().replace(/ /g, '-') || 'Type your title to change this'}`
+            },
+          },
         },
         defaultItem: () => {
           return {
             layout: '../../layouts/MarkdownPostLayout.astro', // to set defaults on schema
+            // TODO: Add tags default into schema
           }
         },
         name: "post",
@@ -83,6 +93,7 @@ export default defineConfig({
             label: "Title",
             isTitle: true,
             required: true,
+
           },
           {
             type: "string",
@@ -91,9 +102,10 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "string",
+            type: 'string',
             name: "author",
             label: "Author Name",
+            options: ['Xavier', 'Guest Writer'],
             required: true,
           },
           {

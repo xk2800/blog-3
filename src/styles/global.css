@@ -95,3 +95,11 @@ pre{
   border-radius: 20px;
   margin: 20px 0;
 }
+
+input[name="filename"] {
+  background-color: red !important;
+}
+
+.bg-white{
+  background-color: red !important;
+}
