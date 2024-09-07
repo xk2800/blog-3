@@ -5,6 +5,7 @@ description: Tina test
 author: Jack Run
 pubDate: 2024-09-04T04:17:38.495Z
 lastUpdated: 2024-09-04T04:24:13.637Z
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 > THis is amazing

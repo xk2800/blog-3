@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Hello, World!'
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 

@@ -5,6 +5,7 @@ description: new fly
 author: Jack Run
 pubDate: 2024-09-04T04:33:51.493Z
 lastUpdated: 2024-09-07T04:41:01.316Z
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 yes la
